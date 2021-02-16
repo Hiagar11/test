@@ -12,7 +12,7 @@ gulp.task('mytask', function () {
 
 
 gulp.task('sass', function(){ // Создаем таск Sass
-    return gulp.src('app/sass/**/*.scss') // Берем источник
+    return gulp.src('app/sass/**/style.scss') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
