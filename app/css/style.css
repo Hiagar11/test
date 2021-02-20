@@ -22,13 +22,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .page-header__wrapper img {
-    width: 110px;
-    height: 18px; }
   .main-nav__toggle {
-    background-color: black;
     width: 24px;
-    height: 16px; } }
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    position: relative; }
+  .main-nav--closed .main-nav__toggle::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 16px;
+    background-color: black;
+    top: 6px;
+    left: 4px;
+    box-shadow: 0px 6px 0px 0px, 0px 12px 0px 0px; } }
 
 @media screen and (min-width: 320px) {
   .logo-mobile, .logo-mobile--v2, .main-nav__toggle {
@@ -62,15 +70,10 @@
     padding: 0 40px; }
   .main-nav__list {
     list-style-type: none; }
-  .main-nav__list::after {
-    content: url("../imges/index-background-desktop.png");
-    width: 50%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1; }
+  .index__page .site-list__item > a {
+    color: white; }
   .site-list__item > a {
-    color: white; } }
+    color: black; } }
 
 .nutrition > * {
   margin-top: 20px; }
@@ -186,7 +189,184 @@
   justify-content: space-between;
   padding-bottom: 20px; }
 
+.catalog__des__button {
+  text-transform: uppercase;
+  background-color: #68b738;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color: white; }
+
+.catalog__des__price {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em; }
+
+.catalog__des__title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left; }
+
+.catalog__des__price {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-row-gap: 3px;
+  justify-content: space-between; }
+
+.catalog__title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 30px;
+  width: 100%; }
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.dop-goods {
+  border: none;
+  border-top: 2px solid #68b738; }
+
+.dop-goods__title--legend {
+  margin: 30px 0;
+  padding: 40px; }
+
+.dop-goods__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left; }
+
+.dop-goods__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  border-collapse: collapse; }
+
 @media screen and (max-width: 320px) {
+  .dop-goods__title {
+    font-size: 20px;
+    line-height: 20px; }
+  .dop-goods__title--legend {
+    padding: 10px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center; }
+  .dop-goods__item > * {
+    margin-bottom: 10px; }
+  .dop-goods__list {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; }
+  .dop-goods__price {
+    display: flex;
+    justify-content: space-between; }
+  .dop-content {
+    display: flex;
+    flex-direction: column; }
+  .dop-content__gift {
+    padding-top: 180px;
+    padding-right: 60px;
+    padding-left: 40px;
+    padding-bottom: 60px;
+    color: white;
+    margin: 40px 20px;
+    background-image: url("../imges/gift-photo-mobile 1.png");
+    width: max-content;
+    background-size: cover;
+    position: relative;
+    align-self: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center; }
+  .dop-content__gift::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    width: 80px;
+    height: 80px;
+    background-image: url("../imges/icon_gift.png"); }
+  .catalog__item {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 20px 20px;
+    text-align: center; }
+  .catalog__item > picture {
+    padding: 20px; }
+  .catalog__des__title {
+    padding-bottom: 20px;
+    width: 60%;
+    text-transform: uppercase; }
+  .catalog__des__price {
+    width: 100%; }
+  .catalog__title {
+    font-family: Oswald;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 20px 0;
+    padding: 30px 20px;
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB; }
+  .catalog__des__button {
+    margin-top: 20px; }
+  .more__button {
+    background-color: #EBEBEB;
+    color: black; }
+  .more__icon {
+    position: relative;
+    width: 100%; }
+  .more__icon::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: gray; }
+  .more__icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 45%;
+    top: 14px;
+    background-color: gray; }
+  .more__title {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    display: block; }
+  .more__description {
+    margin: 0 auto; }
   .nutrition {
     background-image: url("../imges/index-background-mobile 1.png");
     background-repeat: no-repeat;
@@ -317,7 +497,6 @@
     width: 90px;
     margin: 0 10px; }
   .invite__slogan {
-    font-family: Oswald;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -326,7 +505,6 @@
     text-align: left;
     text-transform: uppercase; }
   .invite__adress {
-    font-family: Arial;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -335,6 +513,128 @@
     text-align: left; } }
 
 @media screen and (min-width: 320px) and (max-width: 1000px) {
+  .dop-content {
+    display: flex;
+    flex-direction: column; }
+  .dop-content__gift {
+    padding: 80px;
+    padding-left: 60%;
+    color: white;
+    margin: 40px 20px;
+    background-image: url("../imges/gift-photo-tablet 1.png");
+    max-width: 100%;
+    width: max-content;
+    background-size: cover;
+    position: relative;
+    align-self: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center; }
+  .dop-content__gift::before {
+    content: '';
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    background-image: url("../imges/icon_gift.png"); }
+  .dop-content {
+    padding: 0 20px; }
+  .dop-goods__item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px;
+    justify-content: space-between;
+    border: 1px solid #eaeaea; }
+  .dop-goods__title--legend {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center; }
+  .dop-goods__price {
+    display: flex;
+    flex-basis: 30%;
+    justify-content: space-between; }
+  .catalog {
+    padding: 0 30px; }
+  .catalog__item {
+    flex-basis: 45%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    justify-content: end;
+    position: relative; }
+  .catalog__item::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 430px;
+    left: 0;
+    top: 100px; }
+  .catalog__des__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 60%;
+    text-transform: uppercase; }
+  .catalog__des__price {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center; }
+  .catalog__des__price > span {
+    padding: 5px;
+    border-bottom: 2px solid gray;
+    width: 5em; }
+  .catalog__des__button {
+    margin-top: 20px; }
+  .more {
+    background-color: white;
+    z-index: 2; }
+  .more::before {
+    background-color: white;
+    border: 2px solid #eaeaea;
+    z-index: -1; }
+  .more__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative; }
+  .more__icon::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #eaeaea;
+    top: 49%;
+    left: 0; }
+  .more__icon::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 60px;
+    background-color: #eaeaea;
+    top: 0;
+    left: 47%; }
+  .more__button {
+    color: black;
+    background-color: #EBEBEB; }
   .nutrition__title {
     font-size: 60px;
     line-height: 60px;
@@ -462,6 +762,115 @@
     flex-basis: 30%; } }
 
 @media screen and (min-width: 1000px) {
+  .dop-goods__title--legend {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 107px;
+    padding-left: 3px; }
+  .dop-goods__list {
+    width: 70%;
+    padding: 0 110px;
+    display: flex;
+    flex-direction: column; }
+  .dop-goods__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 200px;
+    grid-column-gap: 20px; }
+  .dop-goods__price {
+    display: flex;
+    justify-content: space-between; }
+  .dop-content {
+    position: relative;
+    margin-bottom: 80px; }
+  .dop-content__gift {
+    position: absolute;
+    width: 250px;
+    height: 280px;
+    background-image: url("../imges/gift-photo-mobile 1.png");
+    right: 110px;
+    top: 40%; }
+  .dop-content__gift {
+    display: flex;
+    justify-content: space-between;
+    align-items: end; }
+  .gift__slogan {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: white; }
+  .dop-content__gift::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 80px;
+    height: 80px;
+    background-image: url("../imges/icon_gift.png"); }
+  .index__page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 720px;
+    height: 600px;
+    background-image: url("../imges/index-background-desktop.png");
+    z-index: -1; }
+  .catalog {
+    padding: 0 110px; }
+  .catalog__item {
+    flex-basis: 20%;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    padding: 30px;
+    position: relative; }
+  .catalog__item::before {
+    content: '';
+    position: absolute;
+    background-color: #eaeaea;
+    width: 100%;
+    z-index: -1;
+    height: 330px;
+    left: 0;
+    top: 120px; }
+  .catalog__item > * {
+    margin-top: 20px; }
+  .catalog__des__title {
+    text-align: center;
+    text-transform: uppercase; }
+  .catalog__des__price {
+    margin-top: 20px; }
+  .more {
+    position: relative; }
+  .more::before {
+    background-color: white;
+    border: 2px solid #eaeaea; }
+  .more__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative; }
+  .more__icon::before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 60px;
+    background-color: #eaeaea;
+    top: 0;
+    left: 49%; }
+  .more__icon::after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #eaeaea;
+    top: 47%;
+    left: 0; }
   .nutrition {
     position: relative;
     margin-bottom: 300px;
@@ -618,6 +1027,9 @@
     display: flex;
     justify-content: space-between;
     padding: 20px; } }
+
+html {
+  overflow-x: hidden; }
 
 .visually-hidden {
   position: absolute;
